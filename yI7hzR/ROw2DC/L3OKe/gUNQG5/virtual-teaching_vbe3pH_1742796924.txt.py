@@ -18,7 +18,6 @@ class DRRQueue(Queue):
 
     put() or put_nowait() can be used to add jobs to the queue.
 
-    Note: This queue can be used with ordinary round robin scheme by making the
     quantum 1 and always calling task_done() with quanta_used=1.
     """
     def __init__(self, maxsize=0, quantum=1):
